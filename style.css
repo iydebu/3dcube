@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+html{
+    font-size: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background: linear-gradient(90deg,#f6cfbe,#b9dcf2);
+}
+
+@keyframes rotate{
+from{
+    transform: rotate3d(.5,1,.2,0deg);
+}
+
+to{
+    transform: rotate3d(.5,1,.2,360deg);
+}
+}
+
+.cube__conatiner{
+    display: flex;
+    color: #1b4965;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cube{
+    height: 200px;
+    margin-top: 100px;
+    width: 200px;
+    transform-style: preserve-3d;
+    transition: all 1s;
+    animation: rotate 4s linear infinite;
+}
+
+.face{
+    border-radius: 1rem;
+    border: 3px dotted black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transition: all 1s;
+   
+}
+
+.one{
+    background-color: #2A9D8F;
+    transform: translateZ(-100px);
+    
+}
+
+.two{
+    background-color: #E9C46A;
+    transform: translateX(100px) rotateY(90deg);
+    
+}
+
+.three{
+    background-color: #F4A261;
+    transform: translateY(-100px) rotateX(-90deg);
+}
+
+.four{
+    background-color: #E76F51;
+    transform: translateY(100px) rotateX(90deg);
+}
+
+.five{
+    background-color: #90be6d;
+    transform: translateX(-100px) rotateY(-90deg);
+}
+
+.six{
+    background-color: #00b4d8;
+    transform: translateZ(100px);
+
+}
